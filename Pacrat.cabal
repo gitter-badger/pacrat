@@ -1,4 +1,4 @@
-name:                Pacrat
+name:                pacrat
 version:             0.0.1
 synopsis:            A wrapper around the Pacman package manager and the AUR.
 description:
