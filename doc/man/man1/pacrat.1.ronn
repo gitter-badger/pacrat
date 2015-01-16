@@ -1,0 +1,20 @@
+pacrat(8) -- the powerful, easy to use Pacman and AUR wrapper
+=============================================================
+
+## SYNOPSIS
+
+`pacrat` [global options] command [command options] [arguments...]
+
+## DESCRIPTION
+
+## OPTIONS
+
+## RETURN VALUES
+
+## AUTHOR
+
+## COPYRIGHT
+
+## SEE ALSO
+
+portal(8)

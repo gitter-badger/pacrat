@@ -1,0 +1,20 @@
+portal(8) -- the terminal UI for Pacrat
+=======================================
+
+## SYNOPSIS
+
+`pacrat` gui [options] [arguments...]
+
+## DESCRIPTION
+
+## OPTIONS
+
+## RETURN VALUES
+
+## AUTHOR
+
+## COPYRIGHT
+
+## SEE ALSO
+
+pacrat(8)
