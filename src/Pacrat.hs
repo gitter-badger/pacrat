@@ -8,8 +8,7 @@ Maintainer  :  Severen Redwood <severen.redwood@gmail.com>
 Stability   :  experimental
 Portability :  non-portable (Designed for use on Arch Linux)
 
-Top level module containing the modules that make up Pacrat such as the
-Pacrat.CLI, Pacrat.Wrapper or Pacrat.GUI module.
+Top level module containing the modules that make up Pacrat.
 -}
 
 module Pacrat(version) where
