@@ -20,6 +20,6 @@ import qualified Pacrat.GUI as GUI
 -- | Main entry point for the application.
 main :: IO ()
 main = do
-	args <- getArgs
-	CLI.processArgs
-	GUI.start
+  args <- getArgs
+  CLI.processArgs
+  GUI.start

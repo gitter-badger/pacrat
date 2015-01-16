@@ -14,14 +14,14 @@
 
 puts "\x1b[33m==>\x1b[0m Checking if the Glasgow Haskell Compiler (GHC) is installed..."
 if system('type ghc') == true
-	puts "\x1b[32m==>\x1b[0m Dependency 'ghc' is present."
+  puts "\x1b[32m==>\x1b[0m Dependency 'ghc' is present."
 else
-	puts "\x1b[31mError:\x1b[0m GHC is not installed!"
+  puts "\x1b[31mError:\x1b[0m GHC is not installed!"
 end
 
 puts "\n\x1b[33m==>\x1b[0m Checking if Make is installed..."
 if system('type make') == true
-	puts "\x1b[32m==>\x1b[0m Dependency 'make' is present."
+  puts "\x1b[32m==>\x1b[0m Dependency 'make' is present."
 else
-	puts "\x1b[31mError:\x1b[0m Make is not installed!"
+  puts "\x1b[31mError:\x1b[0m Make is not installed!"
 end
