@@ -13,12 +13,10 @@ configure:
 	@(printf "\x1b[33m==>\x1b[0m Configuring Pacrat...\n")
 	cabal configure
 
+# All of the work is done in the Ruby script util/build.rb
 build: check-dependencies
-	@(printf "\x1b[33m==>\x1b[0m Configuring...\n")
-	cabal configure
-	@(printf "\x1b[33m==>\x1b[0m Compiling...\n")
-	cabal build
-	@(printf "\n\x1b[32m==>\x1b[0m Build finished! Enjoy! ^_^\n")
+	chmod u+x util/build.rb
+	cd util; ./build.rb
 
 test: check-dependencies
 	@(printf "\n\x1b[33m==>\x1b[0m Running test suite...\n")
@@ -28,7 +26,7 @@ doc:
 	@(printf "\x1b[33m==>\x1b[0m Generating Haddock documentation...\n")
 	cabal haddock --executables --hyperlink-source
 
-# 99% of the work here is done in the Ruby script Util/check-dependencies.rb.
+# 99% of the work here is done in the Ruby script util/check-dependencies.rb.
 check-dependencies:
 	chmod u+x util/check-dependencies.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
@@ -36,7 +34,7 @@ check-dependencies:
 	@(printf "checking for ruby... yes\n\n")
 	cd util; ./check-dependencies.rb
 
-# All of the work is done in the Ruby script Util/generate-man.rb.
+# All of the work is done in the Ruby script util/generate-man.rb.
 man:
 	chmod u+x util/generate-man.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
