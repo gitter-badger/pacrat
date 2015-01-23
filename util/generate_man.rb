@@ -19,6 +19,6 @@ end
 
 puts("\x1b[33m==>\x1b[0m Generating man pages...")
 puts("\x1b[33m==>\x1b[0m pacrat.1.ronn")
-system('ronn -r -w ../Doc/man/man1/pacrat.1.ronn')
+system('ronn -r -w ../doc/man/man1/pacrat.1.ronn')
 puts("\x1b[33m==>\x1b[0m portal.1.ronn")
-system('ronn -r -w ../Doc/man/man1/portal.1.ronn')
+system('ronn -r -w ../doc/man/man1/portal.1.ronn')
