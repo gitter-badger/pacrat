@@ -28,19 +28,19 @@ doc:
 
 # 99% of the work here is done in the Ruby script util/check-dependencies.rb.
 check-dependencies:
-	chmod u+x util/check-dependencies.rb
+	chmod u+x util/check_dependencies.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
 	@(which ruby > /dev/null 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1;})
 	@(printf "checking for ruby... yes\n\n")
-	cd util; ./check-dependencies.rb
+	cd util; ./check_dependencies.rb
 
 # All of the work is done in the Ruby script util/generate-man.rb.
 man:
-	chmod u+x util/generate-man.rb
+	chmod u+x util/generate_man.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
 	@(which ruby > /dev/null 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1; })
 	@(printf "checking for ruby... yes\n\n")
-	cd Util; ./generate-man.rb
+	cd Util; ./generate_man.rb
 
 clean:
 	cabal clean
