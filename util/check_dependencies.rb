@@ -14,11 +14,11 @@
 
 require 'mkmf'
 
-puts "\x1b[33m==>\x1b[0m Checking if the Glasgow Haskell Compiler (GHC) is
-installed..."
+puts("\x1b[33m==>\x1b[0m Checking if the Glasgow Haskell Compiler (GHC) is
+installed...")
 puts("\x1b[31mError:\x1b[0m GHC is not installed!") unless
 find_executable('ghc')
 
-puts "\n\x1b[33m==>\x1b[0m Checking if Make is installed..."
+puts("\n\x1b[33m==>\x1b[0m Checking if Make is installed...")
 puts("\x1b[31mError:\x1b[0m Make is not installed!") unless
 find_executable('make')

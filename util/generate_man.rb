@@ -11,11 +11,8 @@
 # command 'make man' in the project root directory.
 
 puts("\x1b[33m==>\x1b[0m Checking if Ronn is installed...")
-if system('type ronn') == true
-  puts("\x1b[32m==>\x1b[0m Dependency 'ronn' is present.")
-else
-  puts("\x1b[31mError:\x1b[0m Ronn is not installed!")
-end
+puts("\x1b[31mError:\x1b[0m Ronn is not installed!") unless
+find_executable('ronn')
 
 puts("\x1b[33m==>\x1b[0m Generating man pages...")
 puts("\x1b[33m==>\x1b[0m pacrat.1.ronn")
