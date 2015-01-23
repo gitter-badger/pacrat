@@ -40,7 +40,7 @@ man:
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
 	@(which ruby > /dev/null 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1; })
 	@(printf "checking for ruby... yes\n\n")
-	cd Util; ./generate_man.rb
+	cd util; ./generate_man.rb
 
 clean:
 	cabal clean

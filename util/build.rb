@@ -18,7 +18,7 @@ if !File.exist?("#{PACRAT_ROOT}/.cabal-sandbox") ||
 end
 
 puts("\x1b[33m==>\x1b[0m Installing dependencies from Hackage...")
-system('cd ..; cabal install --dependencies')
+system('cd ..; cabal install --only-dependencies')
 puts("\x1b[33m==>\x1b[0m Configuring...")
 system('cd ..; cabal configure')
 puts("\x1b[33m==>\x1b[0m Building...")
