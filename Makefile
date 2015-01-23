@@ -46,3 +46,4 @@ clean:
 	cabal clean
 	rm -f doc/man/man1/pacrat.1
 	rm -f doc/man/man1/portal.1
+	rm -f util/mkmf.log
