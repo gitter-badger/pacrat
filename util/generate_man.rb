@@ -10,6 +10,8 @@
 # Markdown formatted man pages. It is recommended you run this script via the
 # command 'make man' in the project root directory.
 
+require 'mkmf'
+
 puts("\x1b[33m==>\x1b[0m Checking if Ronn is installed...")
 puts("\x1b[31mError:\x1b[0m Ronn is not installed!") unless
 find_executable('ronn')
