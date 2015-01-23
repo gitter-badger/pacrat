@@ -32,16 +32,16 @@ doc:
 check-dependencies:
 	chmod u+x util/check-dependencies.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
-	@(type ruby 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1;})
-	@(printf "\x1b[32m==>\x1b[0m Dependency 'ruby' is present.\n\n")
+	@(which ruby > /dev/null 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1;})
+	@(printf "checking for ruby... yes\n\n")
 	cd util; ./check-dependencies.rb
 
 # All of the work is done in the Ruby script Util/generate-man.rb.
 man:
 	chmod u+x util/generate-man.rb
 	@(printf "\x1b[33m==>\x1b[0m Checking if Ruby is installed...\n")
-	@(type ruby 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1; })
-	@(printf "\x1b[32m==>\x1b[0m Dependency 'ruby' is present.\n\n")
+	@(which ruby > /dev/null 2>&1 || { printf "\x1b[31mError:\x1b[0m Ruby is not installed!\n"; exit 1; })
+	@(printf "checking for ruby... yes\n\n")
 	cd Util; ./generate-man.rb
 
 clean:

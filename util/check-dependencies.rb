@@ -12,16 +12,13 @@
 
 # TODO: Add automatic dependency installation.
 
-puts "\x1b[33m==>\x1b[0m Checking if the Glasgow Haskell Compiler (GHC) is installed..."
-if system('type ghc') == true
-  puts "\x1b[32m==>\x1b[0m Dependency 'ghc' is present."
-else
-  puts "\x1b[31mError:\x1b[0m GHC is not installed!"
-end
+require 'mkmf'
+
+puts "\x1b[33m==>\x1b[0m Checking if the Glasgow Haskell Compiler (GHC) is
+installed..."
+puts("\x1b[31mError:\x1b[0m GHC is not installed!") unless
+find_executable('ghc')
 
 puts "\n\x1b[33m==>\x1b[0m Checking if Make is installed..."
-if system('type make') == true
-  puts "\x1b[32m==>\x1b[0m Dependency 'make' is present."
-else
-  puts "\x1b[31mError:\x1b[0m Make is not installed!"
-end
+puts("\x1b[31mError:\x1b[0m Make is not installed!") unless
+find_executable('make')
